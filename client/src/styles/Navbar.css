@@ -1,0 +1,129 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1976d2;
+    padding: 15px 20px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar-user {
+    font-size: 1rem;
+  }
+  
+  .navbar-btn {
+    background-color: #fff;
+    color: #1976d2;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar-btn:hover {
+    background-color: #e3f2fd;
+  }
+  
+  .logout-btn {
+    background-color: #d32f2f;
+    color: white;
+  }
+  
+  .logout-btn:hover {
+    background-color: #b71c1c;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-wrap: wrap;
+      padding: 10px 15px;
+    }
+  
+    .navbar-brand {
+      font-size: 1.25rem;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .navbar-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      padding: 15px 0;
+      background-color: #1565c0;
+      text-align: center;
+    }
+  
+    .navbar-links.open {
+      display: flex;
+    }
+  
+    .navbar-user {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+  
+    .navbar-btn {
+      padding: 10px;
+      font-size: 0.9rem;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 10px;
+    }
+  
+    .navbar-brand {
+      font-size: 1.1rem;
+    }
+  
+    .navbar-toggle {
+      font-size: 1.25rem;
+    }
+  
+    .navbar-links {
+      padding: 10px 0;
+    }
+  
+    .navbar-user {
+      font-size: 0.85rem;
+    }
+  
+    .navbar-btn {
+      padding: 8px;
+      font-size: 0.85rem;
+      width: 90%;
+    }
+  }

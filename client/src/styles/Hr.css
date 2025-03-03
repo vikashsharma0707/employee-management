@@ -1,0 +1,121 @@
+.employee-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Table Styles */
+  .hr-table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .hr-dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 600px; /* Ensures table is wide enough to require scrolling on medium screens */
+  }
+  
+  .hr-dashboard-table th,
+  .hr-dashboard-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .hr-dashboard-table th {
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .hr-dashboard-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive HRDashboard Styles */
+  @media (max-width: 768px) {
+    .hr-dashboard-table th,
+    .hr-dashboard-table td {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  
+    .employee-image {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hr-dashboard-table th,
+    .hr-dashboard-table td {
+      padding: 6px;
+      font-size: 0.8rem;
+    }
+  
+    .employee-image {
+      width: 30px;
+      height: 30px;
+    }
+  
+    /* Stack tables on very small screens */
+    .hr-dashboard-table {
+      display: block;
+      width: 100%;
+      min-width: 0; /* Reset min-width for stacking */
+    }
+  
+    .hr-dashboard-table thead,
+    .hr-dashboard-table tbody,
+    .hr-dashboard-table tr,
+    .hr-dashboard-table th,
+    .hr-dashboard-table td {
+      display: block;
+      width: 100%;
+    }
+  
+    .hr-dashboard-table th {
+      text-align: center;
+    }
+  
+    .hr-dashboard-table td {
+      text-align: right;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    .hr-dashboard-table td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      font-weight: bold;
+      text-align: left;
+      color: #1976d2;
+    }
+  
+    /* Employee List Table (HRDashboard) */
+    .hr-dashboard-table tr td:nth-child(1):before { content: "Image"; }
+    .hr-dashboard-table tr td:nth-child(2):before { content: "Name"; }
+    .hr-dashboard-table tr td:nth-child(3):before { content: "Email"; }
+    .hr-dashboard-table tr td:nth-child(4):before { content: "Designation"; }
+    .hr-dashboard-table tr td:nth-child(5):before { content: "Salary"; }
+    .hr-dashboard-table tr td:nth-child(6):before { content: "Department"; }
+    .hr-dashboard-table tr td:nth-child(7):before { content: "Title"; }
+    .hr-dashboard-table tr td:nth-child(8):before { content: "Description"; }
+    .hr-dashboard-table tr td:nth-child(9):before { content: "Due Date"; }
+    .hr-dashboard-table tr td:nth-child(10):before { content: "Status"; }
+    .hr-dashboard-table tr td:nth-child(11):before { content: "Update Status"; }
+    .hr-dashboard-table tr td:nth-child(12):before { content: "Action"; }
+  
+    /* Leave Requests Table (HRDashboard) */
+    .hr-dashboard-table tr td:nth-child(1):before { content: "Employee"; }
+    .hr-dashboard-table tr td:nth-child(2):before { content: "Date"; }
+    .hr-dashboard-table tr td:nth-child(3):before { content: "Status"; }
+    .hr-dashboard-table tr td:nth-child(4):before { content: "Actions"; }
+  }
