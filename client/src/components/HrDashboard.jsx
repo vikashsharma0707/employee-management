@@ -7,7 +7,7 @@
 
 import React, { useState, useEffect } from 'react';
 import api from '../utils/api';
-import '../styles/base.css'; // Shared styles
+import '../styles/Base.css'; // Shared styles
 import '../styles/Hr.css'; // HR-specific styles
 
 const HRDashboard = ({ user }) => {
